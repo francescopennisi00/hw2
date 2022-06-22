@@ -38,7 +38,9 @@ function generaNotizie(json,sezione) {
 
         const PTitolo = document.createElement("p");
         PTitolo.textContent = title;
-        PTitolo.dataset.idNotizia = notizia.id;   //serve come input hidden del form per generare la pagina della notizia
+        //MODIFICA PER MONGODB
+        //PTitolo.dataset.idNotizia = notizia.id;   //serve come input hidden del form per generare la pagina della notizia
+        PTitolo.dataset.idNotizia = notizia._id;   //serve come input hidden del form per generare la pagina della notizia
         PTitolo.addEventListener('click',onNewsClick);  //al click avviene il reindirizzamento verso la pagina web (generata dinamicamente) della notizia
         divNotizia.appendChild(PTitolo);
 
